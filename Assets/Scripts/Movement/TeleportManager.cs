@@ -23,7 +23,7 @@ public class TeleportManager : MonoBehaviour
         activate.Enable();
         activate.performed += OnTeleportActivate;
 
-        var cancel = input.GetInput(XrEnum.RightTeleportModeActivate);
+        var cancel = input.GetInput(XrEnum.LeftTeleportModeCancel);
         cancel.Enable();
         cancel.performed += OnTeleportCancel;
 
@@ -34,9 +34,7 @@ public class TeleportManager : MonoBehaviour
 
     private void OnTeleportCancel(InputAction.CallbackContext obj)
     {
-        rayInteractor.enabled = true;
-        _IsActive = true;
-
+        setTeleportState(false);
     }
 
     private void OnTeleportActivate(InputAction.CallbackContext obj)
@@ -69,4 +67,5 @@ public class TeleportManager : MonoBehaviour
         rayInteractor.enabled = state;
         _IsActive = state;
     }
+
 }

@@ -53,11 +53,11 @@
     <UnityVersion>2020.3.16f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Movement\TeleportManager.cs" />
-    <Compile Include="Assets\Scripts\Movement\XrInput.cs" />
+    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\Movement\XrEnum.cs" />
+    <Compile Include="Assets\Scripts\Movement\XrInput.cs" />
+    <Compile Include="Assets\Scripts\Movement\XrHandController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -7,15 +7,10 @@ public class XrInput
 {
 
     private InputActionAsset set;
-    public XrInput(InputActionAsset set)
-    {
-        this.set = set;
-    }
+    public XrInput(InputActionAsset set){this.set = set;}
     public InputAction GetInput(XrEnum xrEnum)
     {
-        int val = (int)xrEnum;
-
-        return set.FindActionMap(GetDeviceString(val)).FindAction(GetInputString(val));
+        return set.FindActionMap(GetDeviceString((int)xrEnum)).FindAction(GetInputString((int)xrEnum));
     }
     private string GetDeviceString(int value)
     {
@@ -25,7 +20,6 @@ public class XrInput
     }
     private string GetInputString(int value) 
     {
-
         switch (value)
         {
             case 0:
